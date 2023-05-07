@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background Audio Example</title>
+	<style>
+		.background-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: -1;
+		  }
+		  
+		  .background-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			opacity: 0;
+			transition: opacity 2s ease-in-out;
+		  }
+		  
+		  .fade-in {
+			opacity: 1;
+		  }
+		  
+
+
+	</style>
+	<script>
+		const images = ["content/Manu_1b.jpg", "content/Manu_1a.jpg", "content/c1.jpg"];
+let currentImageIndex = 0;
+const backgroundContainer = document.querySelector(".background-container");
+const backgroundImage = document.querySelector(".background-image");
+
+function transitionBackgroundImage() {
+  currentImageIndex++;
+  if (currentImageIndex === images.length) {
+    currentImageIndex = 0;
+  }
+  const nextImage = images[currentImageIndex];
+  backgroundImage.style.backgroundImage = `url('${nextImage}')`;
+  backgroundImage.classList.add("fade-in");
+}
+
+transitionBackgroundImage();
+setInterval(transitionBackgroundImage, 5000);
+
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+  const opacity = 1 - scrollPosition / 500;
+  backgroundImage.style.opacity = opacity;
+});
+
+
+
+
+
+
+
+		window.addEventListener('DOMContentLoaded', function() {
+			var audio = new Audio();
+			audio.src = 'tanpura_cut.mp3';
+			audio.loop = true;
+			audio.load();
+
+			window.addEventListener('mousemove', function() {
+				audio.play();
+				window.removeEventListener('mousemove', arguments.callee);
+			});
+		});
+
+		function play(){
+			audio.play();
+		}
+	</script>
+</head>
+</head>
+<body>
+	<div onmousemove="paly()">
+	<h1>Welcome to my website!</h1>
+	<p>This is an example of how to add a background audio to your website.</p>
+	<div class="background-container">
+		<div class="background-image"></div>
+	  </div>
+	  
+</div>
+</body>
+</html>

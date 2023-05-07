@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Manu Hegde</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-1iFgpifpVI/7dO9N9oIRGnZn1hebyx2cNnRfBk2YJyaPjcF4Jn4zj9XJq3mDdA76nolSx6bh8dpvq3q6lAZUaA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+   // Attach an event listener to links with class "smooth-scroll"
+   const links = document.querySelectorAll('.smooth-scroll');
+   for (const link of links) {
+     link.addEventListener('click', smoothScroll);
+   }
+
+   function smoothScroll(event) {
+     // Prevent default behavior of link
+     event.preventDefault();
+
+     // Get target element
+     const targetId = this.getAttribute('href');
+     const target = document.querySelector(targetId);
+
+     // Calculate distance to scroll
+     const distance = target.offsetTop - window.pageYOffset;
+
+     // Set scroll increment and interval time
+     const scrollStep = Math.PI / (500 / 15);
+     const intervalTime = 15;
+
+     // Create loop to scroll page by small increment
+     let scrollCount = 0;
+     const scrollInterval = setInterval(function () {
+       if (scrollCount < distance) {
+         window.scrollTo(0, scrollCount);
+         scrollCount += scrollStep;
+       } else {
+         clearInterval(scrollInterval);
+       }
+     }, intervalTime);
+   }
+
+
+
+
+    window.addEventListener('DOMContentLoaded', function () {
+      var audio = new Audio();
+      audio.src = 'tanpura_cut.mp3';
+      audio.loop = true;
+      audio.load();
+
+      document.addEventListener('click', function () {
+        audio.play();
+      });
+      document.addEventListener('onmousedown', function () {
+        audio.play();
+      });
+      document.addEventListener('onmousemove', function () {
+        audio.play();
+      });
+      document.addEventListener('onmouseover', function () {
+        audio.play();
+      });
+      document.addEventListener('onmouseenter', function () {
+        audio.play();
+      });
+    });
+
+    function play() {
+      audio.play();
+    };
+
+
+
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
+
+    body {
+      font-family: 'Laila', sans-serif;
+      font-size: larger;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    label {
+      font-size: 25px;
+    }
+
+
+    .background-image {
+      background-image: url('content/manutanpura.jpeg');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .gradient-custom,
+    header,
+    nav {
+      /* fallback for old browsers */
+      background: #e6a6a6;
+
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to right, rgba(230, 208, 199, 0.8), rgba(222, 222, 231, 0.7));
+
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgba(230, 208, 199, 0.8), rgba(222, 222, 231, 0.7));
+
+    }
+
+    .error {
+        color: red;
+        font-size: 14px;
+    }
+    
+    iframe {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body class="background-image">
+<div class="gradient-custom">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="#" style="font-size: x-large" ;>Manu Hegde</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-pills ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" style="font-size: x-large;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#about" style="font-size: x-large;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html" style="font-size: x-large;">Gallery</a>
+        </li>
+        <li class="nav-item">
+
+          <a class="nav-link" href="#contact" style="font-size: x-large;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div>
+      <center>
+        <img src="content/Manu_banner_1.png" class="img-fluid" alt="manu-hegde.jpg" style="padding: 3%;">
+      </center>
+    </div>
+
+  </header>
+
+  <div class="container mt-5" style="padding:100px" >
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <!-- Contact Form -->
+            <form id="contactForm">
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                    <span id="nameError" class="error"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                    <span id="emailError" class="error"></span>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+                    <span id="phoneError" class="error"></span>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+                    <span id="messageError" class="error"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+    function validateName(name) {
+        // Regular expression to match only alphabetic characters
+        var regex = /^[a-zA-Z ]+$/;
+      
+        // Check if the name input matches the regular expression
+        if (regex.test(name)) {
+          return true; // Name is valid
+        } else {
+          return false; // Name is invalid
+        }
+      }
+    // Function to validate form inputs
+    function validateForm() {
+        // Get form inputs
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var phone = document.getElementById("phone").value.trim();
+        var message = document.getElementById("message").value.trim();
+
+        // Validate name
+        if (!validateName(name)) {
+            document.getElementById("nameError").innerHTML = "Please enter your name";
+            return false;
+        } else {
+            document.getElementById("nameError").innerHTML = "";
+        }
+
+        // Validate email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email == "") {
+            document.getElementById("emailError").innerHTML = "Please enter your email";
+            return false;
+        }
+        
+     else if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerHTML = "Please enter a valid email address";
+        return false;
+    } else {
+        document.getElementById("emailError").innerHTML = "";
+    }
+
+    // Validate phone
+    var phoneRegex = /^[0-9]{10}$/;
+    if (phone == "") {
+        document.getElementById("phoneError").innerHTML = "Please enter your phone number";
+        return false;
+    } else if (!phoneRegex.test(phone)) {
+        document.getElementById("phoneError").innerHTML = "Please enter a valid 10-digit phone number";
+        return false;
+    } else {
+        document.getElementById("phoneError").innerHTML = "";
+    }
+
+    // Validate message
+    if (message == "") {
+        document.getElementById("messageError").innerHTML = "Please enter your message";
+        return false;
+    } else {
+        document.getElementById("messageError").innerHTML = "";
+    }
+
+    // If all inputs are valid, submit form
+    return true;
+}
+
+// Event listener for form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+    if (validateForm()) {
+        alert("Form submitted successfully!"); // Show success message
+        document.getElementById("contactForm").reset(); // Reset form
+    }
+});
+</script>
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="gradient-custom" style="padding-top: 5%;">
+
+      <div class="container">
+        <h2 class="text-center text-lg mb-6" style="padding-bottom: 5%;">Contact Us</h2>
+        <div class="row">
+
+          <div class="col-lg-5 text-center" id="main_text">
+            <h2>Get In Touch</h2>
+            <p><i class="fa fa-phone"></i>Phone: +91 78927 02843</p>
+            <p><i class="fa fa-envelope"></i>Email: puttamanur@gmail.com</p>
+            <p><i class="fa fa-map-marker"></i>Address: At and post puttanamane ,Sirsi - 581402
+              <a href="https://goo.gl/maps/aMkqY9XwDUntZFy27"><img src="content/maps_logo.png" alt=""
+                  height="300px"></a>
+            </p>
+
+
+          </div>
+          <div class="col-lg-7 text-lg-center ">
+            <ul class="list-inline mb-0">
+
+              <li class="list-inline-item"><a href="https://www.facebook.com/manu.hegde.52?mibextid=ZbWKwL"><img
+                    src="content/fblogo.png" alt="" height="200px" style="padding: 1%;"><i
+                    class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item"><a href="https://youtube.com/@manuhegde7852"><img src="content/yt.png" alt=""
+                    height="200px" style="padding: 1%;"><i class="fa fa-youtube"></i></a>
+              </li>
+              <li class="list-inline-item"><a href="https://instagram.com/manu_hegde_vocalist?igshid=ZDdkNTZiNTM="><img
+                    src="content/instalogo.png" style="padding: 1%;" alt="" height="200px"><i
+                    class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-3 gradient-custom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center text-md-center">
+          <p class="mb-md-0">&copy; 2023 Manu Hegde. All rights reserved.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+
+</html>

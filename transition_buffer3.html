@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Manu Hegde</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-1iFgpifpVI/7dO9N9oIRGnZn1hebyx2cNnRfBk2YJyaPjcF4Jn4zj9XJq3mDdA76nolSx6bh8dpvq3q6lAZUaA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Attach an event listener to links with class "smooth-scroll"
+const links = document.querySelectorAll('.smooth-scroll');
+for (const link of links) {
+  link.addEventListener('click', smoothScroll);
+}
+
+function smoothScroll(event) {
+  // Prevent default behavior of link
+  event.preventDefault();
+  
+  // Get target element
+  const targetId = this.getAttribute('href');
+  const target = document.querySelector(targetId);
+  
+  // Calculate distance to scroll
+  const distance = target.offsetTop - window.pageYOffset;
+  
+  // Set scroll increment and interval time
+  const scrollStep = Math.PI / (500 / 15);
+  const intervalTime = 15;
+  
+  // Create loop to scroll page by small increment
+  let scrollCount = 0;
+  const scrollInterval = setInterval(function() {
+    if (scrollCount < distance) {
+      window.scrollTo(0, scrollCount);
+      scrollCount += scrollStep;
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, intervalTime);
+}
+<!--
+
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var audio = new Audio();
+    audio.src = 'tanpura_cut.mp3';
+    audio.loop = true;
+    audio.load();
+
+    document.addEventListener('click', function() {
+      audio.play();
+    });
+  });
+
+  function play(){
+    audio.play();
+  }
+
+
+-->
+  </script>
+  <style>
+    .gradient-custom {
+      /* fallback for old browsers */
+      background: #f72727;
+
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to right, rgba(241, 26, 26, 0.5), rgba(247, 25, 25, 0.5));
+
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgba(255, 72, 0, 0.6), rgba(117, 245, 31, 0.5))
+    }
+    nav {
+      /* fallback for old browsers */
+      background: #f72727;
+
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to right, rgba(241, 26, 26, 0.5), rgba(247, 25, 25, 0.5));
+
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgba(243, 230, 225, 0.6), rgba(63, 65, 62, 0.5))
+    }
+
+    header ,nav {
+      /* fallback for old browsers */
+      background: #f72727;
+
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to right, rgba(216, 190, 190, 0.5), rgba(223, 207, 207, 0.5));
+
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgba(230, 208, 199, 0.8), rgba(215, 215, 243, 0.5))
+    }
+
+
+    img, iframe {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body class="gradient-custom">
+  <script>
+		window.onload = function() {
+			var audio = new Audio('videoplayback.mp4');
+			audio.autoplay = true;
+			audio.loop = true;
+			document.body.appendChild(audio);
+		};
+	</script>
+  <!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="#" style="font-size: x-large";>Manu Hegde</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-pills ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" style="font-size: x-large;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about" style="font-size: x-large;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery" style="font-size: x-large;">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" style="font-size: x-large;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-light text-center py-5">
+    <div class="col-md-12">
+      <img src="content/Manu_banner_1.png" class="img-fluid" alt="manu-hegde.jpg" style="padding: 3%;">
+    </div>
+    <div class="container">
+
+      <!--<h1>Manu Hegde</h1> -->
+
+      <p class="lead"></p>
+      <!--<a href="#" class="btn btn-primary">Book a Performance</a>\
+      <img src="banner.jpg" class="img-fluid" alt="gallary/banner.jpg">
+      -->
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">About Manu Hegde</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Manu Hegde is an emerging young vocalist of the Gwalior-Jaipur gharana.He was born and brought up
+            in Puttanamane, a small village in the state of Karnataka. Manu trained initially under Vid.
+            Lalita Hiregange. Manu learnt the intricacies of vocal music from Pt. Shripad Hegde Somanamane.
+            Thereafter, he has been receiving invaluable guidance from his guru, maestro Pt. Shashank
+            Maktedar (Goa) where he has been undergoing rigorous training in the Gurukul system for the past
+            7 years.</p>
+          <p>Manu has completed Senior grade from Karnataka Higher Secondary education Board, Visharad and
+            Alankar From Gandharva Maha Vidyalaya. Manu has performed in several music festivals in Dharwad,
+            Bangalore, Goa, Sirsi etc.</p>
+          <p>
+            Some milestones in Manu' s musical journey include prize at the national level inter university
+            youth festival and prize in national level hindustani music competition organized by Gandharva
+            Mahavidyalay Mumbai
+          </p>
+          <p>
+            
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Gallery</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="gallery/image1.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image1.jpg" class="img-fluid" style="height: 500px; width: 350px; ">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="gallery/image5.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image5.jpg" class="img-fluid" style="height: 500px; width: 350px; ">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="gallery/image3.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image3.jpg" class="img-fluid" style="height: 500px; width: 350px; ">
+          </a>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="gallery/image7.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image7.jpg" class="img-fluid" style="height: 260px; width: 450px; ">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="gallery/image8.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image8.jpg" class="img-fluid" style="height: 260px; width: 450px; ">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="gallery/image9.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image9.jpg" class="img-fluid" style="height: 260px; width: 450px; ">
+          </a>
+        </div>
+      </div>
+      <br><br><br>
+
+      <div class="row">
+        <div class="col-md-4">
+          <a href="gallery/image4.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image4.jpg" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="gallery/image2.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image2.jpg" class="img-fluid" style="height: 235px; width: 450px; ">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="gallery/image6.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="gallery/image6.jpg" class="img-fluid">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </section>
+  <!-- Gallery -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Live Videos</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+
+
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WK3qOS33DKI"
+              allowfullscreen></iframe>
+          </div>
+
+
+        </div>
+        <div class="col-md-4">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bJYVmYUrcks"
+              allowfullscreen></iframe>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pDRWZcxbUgQ"
+              allowfullscreen></iframe>
+          </div>
+
+        </div>
+      </div>
+      <br><br><br>
+    </div>
+
+
+
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Contact Us</h2>
+      <div class="row">
+
+        <div class="col-md-6">
+          <h3>Get In Touch</h3>
+          <p><i class="fa fa-map-marker"></i> At and post puttanamane ,Sirsi - 581402</p>
+          <p><i class="fa fa-phone"></i> +91 78927 02843</p>
+          <p><i class="fa fa-envelope"></i> puttamanur@gmail.com</p>
+        </div>
+        <div class="col-md-6 text-center text-md-right">
+          <ul class="list-inline mb-0">
+
+            <li class="list-inline-item"><a href="https://www.facebook.com/manu.hegde.52?mibextid=ZbWKwL"><img src="/gallery/fb.png" alt="" height="55px"><i
+                  class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="https://youtube.com/@manuhegde7852"><img src="/gallery/yt.png" alt="" height="45px"><i class="fa fa-youtube"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="https://instagram.com/manu_hegde_vocalist?igshid=ZDdkNTZiNTM="><img src="/gallery/insta.png" alt="" height="55px"><i
+                  class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-3 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-left">
+          <p class="mb-md-0">&copy; 2023 Manu Hegde. All rights reserved.</p>
+        </div>
+        
+      </div>
+    </div>
+
+</body>
+
+</html>

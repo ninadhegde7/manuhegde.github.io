@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Manu Hegde</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-1iFgpifpVI/7dO9N9oIRGnZn1hebyx2cNnRfBk2YJyaPjcF4Jn4zj9XJq3mDdA76nolSx6bh8dpvq3q6lAZUaA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Attach an event listener to links with class "smooth-scroll"
+    const links = document.querySelectorAll('.smooth-scroll');
+    for (const link of links) {
+      link.addEventListener('click', smoothScroll);
+    }
+
+    function smoothScroll(event) {
+      // Prevent default behavior of link
+      event.preventDefault();
+
+      // Get target element
+      const targetId = this.getAttribute('href');
+      const target = document.querySelector(targetId);
+
+      // Calculate distance to scroll
+      const distance = target.offsetTop - window.pageYOffset;
+
+      // Set scroll increment and interval time
+      const scrollStep = Math.PI / (500 / 15);
+      const intervalTime = 15;
+
+      // Create loop to scroll page by small increment
+      let scrollCount = 0;
+      const scrollInterval = setInterval(function () {
+        if (scrollCount < distance) {
+          window.scrollTo(0, scrollCount);
+          scrollCount += scrollStep;
+        } else {
+          clearInterval(scrollInterval);
+        }
+      }, intervalTime);
+    }
+
+
+
+    window.addEventListener('DOMContentLoaded', function () {
+      var audio = new Audio();
+      audio.src = 'tanpura_cut.mp3';
+      audio.loop = true;
+      audio.load();
+
+      document.addEventListener('click', function () {
+        audio.play();
+      });
+      
+    });
+
+    function play() {
+      audio.play();
+    };
+
+
+
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Laila', sans-serif;
+    }
+
+    #main_text {
+      font-size: 30px;
+    }
+
+
+    .background-image {
+      background-image: url('content/manutanpura.jpeg');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .gradient-custom,
+    header,
+    nav {
+      /* fallback for old browsers */
+      background: #e6a6a6;
+
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to right, rgba(230, 208, 199, 0.8), rgba(222, 222, 231, 0.7));
+
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgba(230, 208, 199, 0.8), rgba(222, 222, 231, 0.7));
+
+    }
+
+
+    
+    iframe {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body class="background-image">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="#" style="font-size: x-large" ;>Manu Hegde</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-pills ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" style="font-size: x-large;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about" style="font-size: x-large;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html" style="font-size: x-large;">Gallery</a>
+        </li>
+        <li class="nav-item">
+
+          <a class="nav-link" href="contact.html" style="font-size: x-large;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div>
+      <center>
+        <img src="content/Manu_banner_1.png" class="img-fluid" alt="manu-hegde.jpg" style="padding: 3%;">
+      </center>
+    </div>
+
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="background-image">
+
+      <div class="gradient-custom">
+        <div class="container" style="padding: 2%;">
+          <h2 class="text-center mb-5">About Manu Hegde</h2>
+          <div class="row">
+            <div class="col-lg-12">
+              <main id="main_text">
+                <p>Manu Hegde is an emerging young vocalist of the Gwalior-Jaipur gharana.He was born and brought up
+                  in Puttanamane, a small village in the state of Karnataka. Manu trained initially under Vid.
+                  Lalita Hiregange. Manu learnt the intricacies of vocal music from Pt. Shripad Hegde Somanamane.
+                  Thereafter, he has been receiving invaluable guidance from his guru, maestro Pt. Shashank
+                  Maktedar (Goa) where he has been undergoing rigorous training in the Gurukul system for the past
+                  7 years.
+                </p>
+                  <br>
+                <p>Manu has completed Senior grade from Karnataka Higher Secondary education Board, Visharad and
+                  Alankar From Gandharva Maha Vidyalaya. Manu has performed in several music festivals in Dharwad,
+                  Bangalore, Goa, Sirsi etc.
+                </p>
+                <br>
+                <p>
+                  Some milestones in Manu' s musical journey include prize at the national level inter university
+                  youth festival and prize in national level hindustani music competition organized by Gandharva
+                  Mahavidyalay Mumbai
+                </p>
+                <br><br>
+              </main>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <main id="main_text">
+                <br><br>
+                <p>
+                  ಶಿರಸಿ ತಾಲ್ಲೂಕಿನ ಪುಟ್ಟನಮನೆಯಲ್ಲಿ ಹುಟ್ಟಿದ ಮನು ಹೆಗಡೆಗೆ ಬಾಲ್ಯದಿಂದ ಸಂಗೀತ ಪರಿಸರ ದೊರೆತಿದ್ದೊಂದು ಸೌಭಾಗ್ಯ
+                  ಅವಿಭಕ್ತ ಕುಟುಂಬದ ಹೆಚ್ಚಿನ ಸದಸ್ಯರಿಗೆ  ಸಂಗೀತದಲ್ಲಿ ಒಲವು ಇದ್ದದ್ದರಿಂದ ಮನೆಯಲ್ಲೂ ಸದಾ ದಿಗ್ಗಜರುಗಳ ಸಂಗೀತ ಸುಧೆ
+                  ಬಾನುಲಿ ಮೂಲಕ ಹರಿಯುತ್ತಿತ್ತು. ಪಂಡಿತ್ ಭೀಮಸೇನ ಜೋಶಿ, ಪಂಡಿತ್ ಹರಿಪ್ರಸಾದ್ ಚೌರಾಸಿಯಾ ಅವರ ಸಂಗೀತದ
+                  ಮಾಧುರ್ಯ ಎಳವೆಯಲ್ಲೆ ಹೀಗೆ ಮನಸ್ಸಿನಲ್ಲಿ ನಾಟಿ ಬಿಟ್ಟಿತ್ತು. ಇದನ್ನು ಗುರುತಿಸಿದ ತಂದೆ ರವಿ ಹೆಗಡೆ ಮಗನನ್ನು ಆರನೇಯ
+                  ವಯಸ್ಸಿಗೆ ಸಂಗೀತ ವಿದೂಷಿ ಲಲಿತಾ ಹಿರೇಗಂಗೆಯವರ ಬಳಿ ತೊಡಗಿಸಿದರು.
+                  ನಂತರದ ಸಂಗೀತಾಭ್ಯಾಸ ನಡೆದದ್ದು ಶ್ರೀಪಾದ ಹೆಗಡೆ ಸೋಮನಮನೆಯವರ ಬಳಿ. ಕಿರಾಣಾ ಘರಾಣೆಯ ಸಂಗೀತಾಭ್ಯಾಸ ಇಲ್ಲಿ ನಡೆಯುವಾಗಲೇ
+                  ಸಂಗೀತದಲ್ಲಿ ಸೀನಿಯರ್ ಗ್ರೇಡ್ ದೊರೆಯಿತು.
+                </p>
+                <br>
+                <p>
+                  ಕಾಲೇಜಿನ ಪದವಿ ಮುಗಿಯುತ್ತಿದ್ದಂತೆ ಮುಂದಿನ ಓದಿಗೆ ಗೋವಾಕ್ಕೆ ಹೋಗುವಾಗ ಉತ್ತಮ ಗಾಯಕನಾಗಬೇಕೆಂಬ ಹಂಬಲ ಗಟ್ಟಿಯಾಗಿತ್ತು.
+                  ಗ್ವಾಲಿಯರ್ ಮತ್ತು ಘರಾಣಾದ ಮೇರು ಗಾಯಕರಾದ ಶಶಾಂಕ್ ಮಕ್ತೆದಾರರಲ್ಲಿ ಸಂಗೀತದ ಅಭ್ಯಾಸ ಮುಂದುವರಿಸಬೇಕೆಂಬ ಇಚ್ಛೆ
+                  ಬಲವಾಗಿತ್ತು.
+                  ಅದೃಷ್ಟವೂ ಚೆನ್ನಾಗಿತ್ತು. ಗೋವಾ ಮ್ಯೂಸಿಕ್ ಕಾಲೇಜಿನಲ್ಲಿ ಪ್ರಾಧ್ಯಾಪಕರಾಗಿದ್ದ ಮಕ್ತೆದಾರರು ಸಂಗೀತದ ಕಲಿಕೆಗೆ ಅವಕಾಶ
+                  ಮಾಡಿಕೊಟ್ಟರು. ಅದು ಮನು ಹೆಗಡೆಯ ಬಾಳಿನಲ್ಲಿ ಬಂದ ದೊಡ್ಡ ತಿರುವು. ಸಂಗೀತ ಕಲಿಕೆಯನ್ನು ಬಹು ಗಂಭೀರವಾಗಿ ತೆಗೆದುಕೊಂಡ ಮನು
+                  ಜೊತೆ ಜೊತೆಯಲ್ಲಿ ತನ್ನ ಎಲ್.ಎಲ್.ಬಿ ಮತ್ತು ಎಲ್.ಎಲ್.ಎಮ್ ಪದವಿಯನ್ನು ಗೋವಾದ ಸಳಗಾoವಕರ್ ಕಾಲೇಜಿನಲ್ಲಿ
+                  ಪೂರ್ತಿಗೊಳಿಸಿಕೊಂಡ.
+                  ಗುರುಕುಲ ಪದ್ಧತಿಯಂತೆ ಶಶಾಂಕ್ ಮಕ್ತೇದಾರರಲ್ಲಿ ಗಾಯನದ ತಾಲೀಮು ಪಡೆಯುತ್ತಾ ಗಂಧರ್ವ ಮಹಾವಿದ್ಯಾಲಯದಲ್ಲಿ ವಿಶಾರದ ಮತ್ತು
+                  ಅಲಂಕಾರದ ಪದವಿಯನ್ನು ಪಡೆದುಕೊಂಡಿದ್ದು ವಿಶೇಷ. ತಮ್ಮ ಗುರುಗಳೊಡನೆ ಮುಂಬೈ, ಧಾರವಾಡ, ಬೆಂಗಳೂರಿನಂತಹ ಮಹಾನಗರಗಳಲ್ಲಿ ಸಂಗೀತ
+                  ಪ್ರದರ್ಶನದ ಪ್ರಾತ್ಯಕ್ಷಿಕೆಯನ್ನು ಗಮನಿಸುತ್ತ, ಕಳೆದ ಆರು ವರ್ಷಗಳಿಂದ ಶಶಾಂಕ್ ಮಕ್ತೆದಾರರಲ್ಲಿ ಸಂಗೀತಾಭ್ಯಾಸ
+                  ಮುಂದುವರಿಸಿದ್ದಾರೆ.
+                </p>
+                <br>
+                <p>
+                  ರಾಷ್ಟ್ರಮಟ್ಟದ ಯುವಜನ ಮೇಳದ ಹಿಂದುಸ್ತಾನಿ ಶಾಸ್ತ್ರೀಯ ಸಂಗೀತ ಗಾಯನ ಸ್ಪರ್ಧೆಯಲ್ಲಿ ಬಹುಮಾನ, ಗಂಧರ್ವ ಮಹಾವಿದ್ಯಾಲಯ ಮುಂಬೈ
+                  ಇವರು ನಡೆಸುವ ಹಿಂದುಸ್ತಾನಿ ಶಾಸ್ತ್ರೀಯ ಸಂಗೀತ ಗಾಯನ ಸ್ಪರ್ಧೆಯಲ್ಲಿ ಬಹುಮಾನ ಇತ್ಯಾದಿ ಬಹುಮಾನಗಳನ್ನು ಪಡೆದಿದ್ದಾರೆ.
+                  ಮಧುರವಾದ ಧ್ವನಿ, ರಾಗದಲ್ಲಿ ಶುದ್ಧತೆ, ಲಯಬದ್ಧ ಆಲಾಪ್, ತಾನ್ ಮತ್ತು ಲಾಯಕಾರಿಗಳ ವಿಶಿಷ್ಟತೆಗಳನ್ನು ತಮ್ಮ ಗಾಯನದಲ್ಲಿ
+                  ಹೊಂದಿ
+                  ಸದ್ಯ ತಮ್ಮ ಹುಟ್ಟೂರಾದ ಪುಟ್ಟನಮನೆಯಲ್ಲಿಯೇ ಹೆಚ್ಚಿನ ಸಂಗೀತಭ್ಯಾಸ ನಡೆಸುತ್ತಾ ವೃತ್ತಿಯಲ್ಲಿ ವಕೀಲರಾಗಿದ್ದಾರೆ.
+
+                </p>
+                <br><br>
+              </main>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <img src="content/manu_crop_2.png " class="img" alt="" >
+          </div>
+
+          <div class="container">
+            <h2>Download PDF</h2>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="englishDropdown"
+                style="padding: 2%; margin:2%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Download
+              </button>
+              <div class="dropdown-menu" aria-labelledby="englishDropdown">
+                <a class="dropdown-item" href="content/manu_hegde.pdf" target="_blank">Download Kannada PDF</a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="gradient-custom">
+
+      <div class="container">
+        <h2 class="text-center text-lg mb-6">Contact Us</h2>
+        <div class="row">
+
+          <div class="col-lg-5 text-center" id="main_text">
+            <h2>Get In Touch</h2>
+            <p><i class="fa fa-phone"></i>Phone: +91 78927 02843</p>
+            <p><i class="fa fa-envelope"></i>Email: puttamanur@gmail.com</p>
+            <p><i class="fa fa-map-marker"></i>Address: At and post puttanamane ,Sirsi - 581402
+              <a href="https://goo.gl/maps/aMkqY9XwDUntZFy27"><img src="content/maps_logo.png" alt=""
+                  height="300px"></a>
+            </p>
+
+
+          </div>
+          <div class="col-lg-7 text-lg-center ">
+            <ul class="list-inline mb-0">
+
+              <li class="list-inline-item"><a href="https://www.facebook.com/manu.hegde.52?mibextid=ZbWKwL"><img
+                    src="content/fblogo.png" alt="" height="200px" style="padding: 1%;"><i
+                    class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item"><a href="https://youtube.com/@manuhegde7852"><img src="content/yt.png" alt=""
+                    height="200px" style="padding: 1%;"><i class="fa fa-youtube"></i></a>
+              </li>
+              <li class="list-inline-item"><a href="https://instagram.com/manu_hegde_vocalist?igshid=ZDdkNTZiNTM="><img
+                    src="content/instalogo.png" style="padding: 1%;" alt="" height="200px"><i
+                    class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-3 gradient-custom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center text-md-center">
+          <p class="mb-md-0">&copy; 2023 Manu Hegde. All rights reserved.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
